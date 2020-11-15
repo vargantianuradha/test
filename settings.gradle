@@ -4,6 +4,6 @@
                 mavenCentral() 
                }  
  dependencies {
- classpath 'net.saliman:gradle-properties-plugin:1.5.1'
+ classpath 'net.saliman:gradle-properties-plugin:1.4.3'
                 } 
  } // invoke the plugin apply plugin: 'net.saliman.properties'
