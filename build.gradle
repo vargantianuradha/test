@@ -16,7 +16,7 @@ artifactory {
 	    mavenCompatible = true
             }
         }
-
+}
    resolve {
         repository {
             ivy {
