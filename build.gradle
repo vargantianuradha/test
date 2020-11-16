@@ -3,11 +3,7 @@ buildscript {
         jcenter()
         
     }
-    dependencies {
-                 classpath "org.jfrog.buildinfo:build-info-extractor-gradle:3.0.1"
-}  
 } 
-apply plugin: "com.jfrog.artifactory"
 
 artifactory {
     contextUrl = "${artifactory_contextUrl}"   //The base Artifactory URL if not overridden by the publisher/resolver
