@@ -16,21 +16,30 @@ allprojects {
 artifactory {
     contextUrl = "${artifactory_contextUrl}"   //The base Artifactory URL if not overridden by the publisher/resolver
     publish {
+    artifactory {
+    publish {
         repository {
-            repoKey = 'libs-release-local'
+            ivy {
+	    repoKey = 'lobs-snapshot-local'
             username = "${artifactory_user}"
             password = "${artifactory_password}"
-            maven = true
-            
-        }
-    }
-    resolve {
-        repository {
-            repoKey = 'gradel-dev-virtual'
-            username = "${artifactory_user}"
-            password = "${artifactory_password}"
-            maven = true
-            
+	    mavenCompatible = true
+            }
         }
     }
 }
+}
+    resolve {
+    artifactory {
+    publish {
+        repository {
+            ivy {
+	    repoKey = 'gradel-dev-virtual'
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
+            mavenCompatible = true
+            }
+        }
+    }
+}
+        
